@@ -1,4 +1,4 @@
-<h3>Create Employee</h3>
+<h3>Update Employee</h3>
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
@@ -18,9 +18,4 @@
 
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
-</div>
-
-<div [hidden]="!submitted">
-  <h4>You submitted successfully!</h4>
-  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
 </div>
