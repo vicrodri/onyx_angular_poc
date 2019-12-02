@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ONYX Angular POC';
+  title = 'RECTIFICATION FISCALE';
+
+  /** Log a HeroService message with the MessageService */
+  public log(message: string) {
+    console.log(message);
+  }
 }

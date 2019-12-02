@@ -1,11 +1,21 @@
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
     <!-- Links -->
     <ul class="navbar-nav">
-      <li class="nav-item">
-          <a routerLink="employees" class="nav-link" routerLinkActive="active">Employee List</a>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" 
+            role="button" aria-haspopup="true" aria-expanded="false" routerLinkActive="active">Rectification Fiscale Coupons</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#" routerLink="rectifCoupons_creer" routerLinkActive="active">Creer</a>
+              <a class="dropdown-item" href="#" routerLink="rectifCoupons_interroger" routerLinkActive="active">Interroger</a>
+            </div>
       </li>
       <li class="nav-item">
-          <a routerLink="add" class="nav-link" routerLinkActive="active">Add Employee</a>
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" 
+          role="button" aria-haspopup="true" aria-expanded="false" routerLinkActive="active">Rectification Fiscale MATIF et TCN</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#" routerLink="rectifMatif_creer" routerLinkActive="active">Creer</a>
+            <a class="dropdown-item" href="#" routerLink="rectifMatif_interroger" routerLinkActive="active">Interroger</a>
+          </div>
       </li>
     </ul>
   </nav>
@@ -22,6 +32,6 @@
   
   <footer class="footer">
     <div class="container">
-        <span>ONYX Angular POC</span>
+        <span>REC Angular POC</span>
     </div>
   </footer>

@@ -1,0 +1,24 @@
+<div class="container">
+    <app-compte></app-compte>
+    <div style="clear: both;">
+        <label for="txtValeur" id="lblValeur">Valeur:</label>
+        <input type="text" id="txtValeur" class="form-control" name="valur" pattern="\d*" maxlength="12" />
+    </div>
+    <div>
+        <label for="txtDCredit" id="lblDCredit">Date du crédit:</label>
+        <input type="text" id="txtDCredit" class="form-control" name="dCredit" pattern="\d*" maxlength="10">
+    </div>
+    <div style="clear: both;">
+        <label for="txtEcheance" id="lblEcheance">Echéance:</label>
+        <input type="text" id="txtEcheance" class="form-control" name="echeance" pattern="\d*" maxlength="5" >
+    </div>
+    <div>
+        <label for="cmbForme" id="lblForme">Forme:</label>
+        <input type="text" id="cmbForme" class="form-control" name="forme" >
+    </div>
+    <div>
+        <label for="txtQuantite" id="lblQuantite">Quantité:</label>
+        <input type="text" id="txtQuantite" class="form-control" name="banque" pattern="\d*" maxlength="5">
+    </div>
+    <div style="float:right;"><button (click)="search();" >Recherche</button></div>
+</div>
