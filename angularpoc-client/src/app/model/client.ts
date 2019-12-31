@@ -1,8 +1,8 @@
-export class Compte {
+export class Client {
     banque: number;
     agence: number;
     classement: number;
     serie: number;
     sCompte: number;
-    client: string;
+    name: string;
 }

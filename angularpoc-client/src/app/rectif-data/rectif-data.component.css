@@ -19,6 +19,13 @@ input[type=text] {
     margin: 0 1em 1em 1em; 
 }
 
+select {
+    width: 15%;
+    float: left; 
+    margin: 0 1em 1em 1em; 
+    padding-right: 1em;
+}
+
 input[type=text]#txtBanque {
     width: 5em;
 }
@@ -32,3 +39,16 @@ label {
 .form-control {
     font-size: 0.9rem;
 }
+
+.onyx-container {
+    overflow: auto;
+    border-width:thin;
+    border-color: lightgray;
+    border-style: solid;
+}
+
+div.button-search {
+    float: right;
+    margin: 0 1rem 0 0;
+}
+

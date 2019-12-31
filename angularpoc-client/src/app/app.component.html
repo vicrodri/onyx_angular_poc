@@ -5,16 +5,16 @@
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" 
             role="button" aria-haspopup="true" aria-expanded="false" routerLinkActive="active">Rectification Fiscale Coupons</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#" routerLink="rectifCoupons_creer" routerLinkActive="active">Creer</a>
-              <a class="dropdown-item" href="#" routerLink="rectifCoupons_interroger" routerLinkActive="active">Interroger</a>
+              <a class="dropdown-item" href="#" routerLink="/rectifCoupons_creer" routerLinkActive="active">Creer</a>
+              <a class="dropdown-item" href="#" routerLink="/rectifCoupons_interroger" routerLinkActive="active">Interroger</a>
             </div>
       </li>
       <li class="nav-item">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" 
           role="button" aria-haspopup="true" aria-expanded="false" routerLinkActive="active">Rectification Fiscale MATIF et TCN</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#" routerLink="rectifMatif_creer" routerLinkActive="active">Creer</a>
-            <a class="dropdown-item" href="#" routerLink="rectifMatif_interroger" routerLinkActive="active">Interroger</a>
+            <a class="dropdown-item" href="#" routerLink="/rectifMatif_creer" routerLinkActive="active">Creer</a>
+            <a class="dropdown-item" href="#" routerLink="/rectifMatif_interroger" routerLinkActive="active">Interroger</a>
           </div>
       </li>
     </ul>
@@ -24,7 +24,7 @@
     <h2 style="text-align: center;">{{title}}</h2>
     <hr>  
     <div class="card">
-      <div class="card-body">
+      <div class="card-body" >
         <router-outlet></router-outlet>
       </div>
     </div>

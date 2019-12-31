@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CompteComponent } from './compte.component';
+import { RectifMainComponent } from './rectif-main.component';
 
-describe('CompteComponent', () => {
-  let component: CompteComponent;
-  let fixture: ComponentFixture<CompteComponent>;
+describe('RectifMainComponent', () => {
+  let component: RectifMainComponent;
+  let fixture: ComponentFixture<RectifMainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CompteComponent ]
+      declarations: [ RectifMainComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CompteComponent);
+    fixture = TestBed.createComponent(RectifMainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

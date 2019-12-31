@@ -1,12 +1,17 @@
-<div class="container">
-    <app-compte></app-compte>
+<div class="onyx-container" >
+    <app-client></app-client>
     <div style="clear: both;">
         <label for="txtValeur" id="lblValeur">Valeur:</label>
         <input type="text" id="txtValeur" class="form-control" name="valur" pattern="\d*" maxlength="12" />
     </div>
     <div>
         <label for="txtDCredit" id="lblDCredit">Date du crédit:</label>
-        <input type="text" id="txtDCredit" class="form-control" name="dCredit" pattern="\d*" maxlength="10">
+        <!--<input type="text" id="txtDCredit" class="form-control" name="dCredit" pattern="\d*" maxlength="10">-->
+        <mat-form-field style="padding-left: 0.5em; font-size: 0.9rem; margin-top: -1rem; vertical-align: sub;">
+            <input matInput [matDatepicker]="picker" >
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
     </div>
     <div style="clear: both;">
         <label for="txtEcheance" id="lblEcheance">Echéance:</label>
@@ -14,11 +19,20 @@
     </div>
     <div>
         <label for="cmbForme" id="lblForme">Forme:</label>
-        <input type="text" id="cmbForme" class="form-control" name="forme" >
+        <!--<input type="text" id="cmbForme" class="form-control" name="forme" >-->
+        <select id="cmbForme" class="form-control" name="forme">
+            <option value="1">option 1</option>
+            <option value="2">option 2</option>
+        </select>
     </div>
     <div>
         <label for="txtQuantite" id="lblQuantite">Quantité:</label>
         <input type="text" id="txtQuantite" class="form-control" name="banque" pattern="\d*" maxlength="5">
     </div>
-    <div style="float:right;"><button (click)="search();" >Recherche</button></div>
+    <div class="button-search">
+        <button (click)="search();" id="btnRecherche" class="btn btn-info">Recherche</button>
+    </div>
+</div>
+<div class="onyx-container" style="margin-top: 1rem;">
+    <app-rectif-list></app-rectif-list>
 </div>

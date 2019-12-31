@@ -1,7 +1,12 @@
-export class userInfo {
-    userId: number;
+export class UserInfo {
+    matricule: number;
     omf: number;
     hostname: string;
-    network: number;
-    habilitationService: boolean;
+    numRL: number;
+    webServiceHabilitation: boolean;
+    banque: number;
+    agence: number;
+    banqueAffectation: number;
+    agenceAffectation: number;
+    entiteAffectation: number;
 }
