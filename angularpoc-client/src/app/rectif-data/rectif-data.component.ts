@@ -7,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RectifDataComponent implements OnInit {
 
+  showList: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+    this.showList = false;
   }
 
-  search() {
-    window.alert('Toy buscando');
+  next() {
+    window.alert('Toy continuando');
+    this.showList = true;
   }
 }

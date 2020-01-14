@@ -8,8 +8,8 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const clients = [
-      { banque: 30076, agence: 2019, classement: 144539, serie: 2, sCompte: 0, client: 'Le Balcon Billete' },
-      { banque: 30076, agence: 2063, classement: 122316, serie: 2, sCompte: 0, client: 'Le Otro Balcon' }
+      { banque: 30076, agence: 2019, classement: 144539, serie: 2, sCompte: 0, name: 'Le Balcon Billete' },
+      { banque: 30076, agence: 2063, classement: 122316, serie: 2, sCompte: 0, name: 'Le Otro Balcon' }
     ];
     return {clients};
   }

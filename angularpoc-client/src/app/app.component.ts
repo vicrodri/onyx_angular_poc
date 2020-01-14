@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'RECTIFICATION FISCALE';
 
+  quit() {
+    window.alert('Marcho');
+    return false;
+  }
 }

@@ -24,7 +24,6 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { RectifDataComponent } from './rectif-data/rectif-data.component';
 import { ClientComponent } from './client/client.component';
 import { RectifListComponent } from './rectif-list/rectif-list.component';
-import { RectifMainComponent } from './rectif-main/rectif-main.component';
 
 import { UserInfo } from './model/userInfo';
 //create our cost var with the information about the format that we want 
@@ -45,8 +44,7 @@ export const MY_FORMATS = {
     AppComponent,
     RectifDataComponent,
     ClientComponent,
-    RectifListComponent,
-    RectifMainComponent
+    RectifListComponent
   ],
   imports: [
     BrowserModule,
@@ -99,7 +97,7 @@ export class AppModule {
     return decodeURIComponent(window.location.search.substring(1)).split('&') 
             .map((v) => { return v.split("=") }) 
             .filter((v) => { return (v[0] === sParam) ? true : false }) 
-            .reduce((acc:any,curr:any) => { return curr[1]; },undefined);
+            .reduce((acc:any,curr:any) => { return curr[1]; }, undefined);
   };
     
 }

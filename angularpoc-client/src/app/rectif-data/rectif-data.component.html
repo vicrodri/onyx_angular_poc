@@ -27,12 +27,18 @@
     </div>
     <div>
         <label for="txtQuantite" id="lblQuantite">Quantité:</label>
-        <input type="text" id="txtQuantite" class="form-control" name="banque" pattern="\d*" maxlength="5">
+        <input type="text" id="txtQuantite" class="form-control" name="quantite" pattern="\d*" maxlength="5">
     </div>
     <div class="button-search">
-        <button (click)="search();" id="btnRecherche" class="btn btn-info">Recherche</button>
+        <button (click)="next();" id="btnContinue" class="btn btn-info">Continue</button>
     </div>
 </div>
-<div class="onyx-container" style="margin-top: 1rem;">
+<div class="onyx-container" style="margin-top: 1rem;" *ngIf="showList">
     <app-rectif-list></app-rectif-list>
+    <div style="text-align: right;">
+        <button id="btnExecuter" (click)="exec();" id="btnExecuter" class="btn btn-info" style="margin-right: 1em;">Exécuter</button>
+        <button id="btnReprendre" (click)="reprendre();" id="btnReprendre" class="btn btn-info" style="margin-right: 1em;">Reprendre</button>
+        <button id="btnConversion" (click)="conv();" id="btnConv" class="btn btn-info" style="margin-right: 1em;">Conversion</button>
+    </div>
 </div>
+

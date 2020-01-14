@@ -1,0 +1,152 @@
+body {
+    background: rgb(173, 199, 255);
+}
+ 
+#main {
+    min-height: 600px;
+    margin: 0px;
+    padding: 0px;
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-flex-flow: row;
+            flex-flow: row;
+}
+  
+#main > article {
+    margin: 4px;
+    padding: 5px;
+    border: 5px solid #4c9bd4;
+    border-radius: 7pt;
+    background: white;
+    -webkit-flex: 3 1 60%;
+            flex: 3 1 60%;
+    -webkit-order: 2;
+            order: 2;
+    
+}
+   
+#main > nav {
+    margin: 4px;
+    padding: 5px;
+    border: 5px solid #4c9bd4;
+    border-radius: 7pt;
+    background: white;
+    -webkit-flex: 1 6 20%;
+            flex: 1 6 20%;
+    -webkit-order: 1;
+            order: 1;
+    
+}
+   
+#main > aside {
+    margin: 4px;
+    padding: 5px;
+    border: 5px solid #4c9bd4;
+    border-radius: 7pt;
+    background: white;
+    -webkit-flex: 1 6 20%;
+            flex: 1 6 20%;
+    -webkit-order: 3;
+            order: 3;
+    
+}
+  
+header, footer {
+    display: block;
+    margin: 4px;
+    padding: 5px;
+    min-height: 100px;
+    border: 5px solid #4c9bd4;
+    border-radius: 7pt;
+    background: black;
+    color: white;
+}
+
+header > h2 {
+    text-align: right; 
+    padding: 1rem 2rem; 
+    display: block; 
+    width: 100%; 
+}
+
+footer > h5 {
+    text-align: right; 
+    padding: 1rem 2rem; 
+    display: block; 
+    width: 100%; 
+}
+
+h2 > a {
+    color: white;
+}
+  
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) {
+
+    #main, #page {
+        -webkit-flex-flow: column;
+                flex-flow: column;
+    }
+    
+    #main > article, #main > nav, #main > aside {
+        /* Return them to document order */
+        -webkit-order: 0;
+                order: 0;
+    }
+
+    #main > nav, #main > aside, header, footer {
+        min-height: 50px;
+        max-height: 50px;
+    }
+}
+
+/* CSSTerm.com Horizontal Easy DropDown CSS menu */
+
+.onyx-drop-menu {
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+.onyx-drop-menu li { 
+    float:left; 
+}
+
+.onyx-drop-menu li a {
+	padding:12px 20px;
+	display:block;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    color:#007bff;
+}
+
+/* Submenu */
+.onyx-drop-menu ul {
+	list-style-type:none;
+}
+
+.onyx-drop-submenu {
+    display: none;
+    background-color:white;
+}
+
+.onyx-drop-submenu li{
+    width: 100%;
+    text-indent:15px;
+}
+
+.onyx-drop-menu li:hover .onyx-drop-submenu {
+	display: block;	
+}
+
+.onyx-drop-submenu li:hover a {  
+    color: #0056b3;
+    font-style: italic;
+    background-color: transparent;
+ }
+
+ .dropdown-item.active {
+     background-color: transparent;
+     color: #0056b3;
+     font-weight: bold;
+ }

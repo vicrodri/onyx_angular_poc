@@ -1,37 +1,42 @@
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <!-- Links -->
-    <ul class="navbar-nav">
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" 
-            role="button" aria-haspopup="true" aria-expanded="false" routerLinkActive="active">Rectification Fiscale Coupons</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#" routerLink="/rectifCoupons_creer" routerLinkActive="active">Creer</a>
-              <a class="dropdown-item" href="#" routerLink="/rectifCoupons_interroger" routerLinkActive="active">Interroger</a>
-            </div>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" 
-          role="button" aria-haspopup="true" aria-expanded="false" routerLinkActive="active">Rectification Fiscale MATIF et TCN</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#" routerLink="/rectifMatif_creer" routerLinkActive="active">Creer</a>
-            <a class="dropdown-item" href="#" routerLink="/rectifMatif_interroger" routerLinkActive="active">Interroger</a>
-          </div>
-      </li>
-    </ul>
-  </nav>
-  <div class="container">
-    <br>
-    <h2 style="text-align: center;">{{title}}</h2>
-    <hr>  
-    <div class="card">
-      <div class="card-body" >
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-  </div>
-  
-  <footer class="footer">
-    <div class="container">
-        <span>REC Angular POC</span>
-    </div>
-  </footer>
+<body>
+<header>
+  <h2><a class="nav-link" href="#" role="button" routerLinkActive="active" routerLink="/" >{{title}}</a></h2>
+</header>
+<div id='main'>
+<nav class="onyx-main-menu">
+  <ul class="onyx-drop-menu">
+    <li class="onyx-drop-menu-item">
+      <a href="#" role="button" aria-haspopup="true"
+       aria-expanded="false" routerLinkActive="active">Rectification Fiscale Coupons</a>
+      <ul class="onyx-drop-submenu">
+        <li>
+          <a class="dropdown-item" role="button" href="#" routerLink="/rectifCoupons_creer" routerLinkActive="active">Creer</a></li>
+        <li>
+          <a class="dropdown-item" role="button" href="#" routerLink="/rectifCoupons_interroger" routerLinkActive="active">Interroger</a></li>
+      </ul>
+    </li>
+    <li class="onyx-drop-menu-item">
+      <a href="#" role="button" aria-haspopup="true"
+       aria-expanded="false" routerLinkActive="active">Rectification Fiscale Matif et TCN</a>
+      <ul class="onyx-drop-submenu">
+        <li>
+          <a class="dropdown-item" role="button" href="#" routerLink="/rectifMatif_creer" routerLinkActive="active">Creer</a></li>
+        <li>
+          <a class="dropdown-item" role="button" href="#" routerLink="/rectifMatif_interroger" routerLinkActive="active">Interroger</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="" role="button" (click)="quit();"
+        aria-haspopup="true" aria-expanded="false">Quitter</a>
+    </li>
+  </ul>
+</nav>
+<article >
+    <router-outlet></router-outlet>
+</article>
+</div>
+
+<footer class="footer">
+  <h5>REC Angular POC</h5>
+</footer>
+</body>
