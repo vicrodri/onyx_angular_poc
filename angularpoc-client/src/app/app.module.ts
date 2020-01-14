@@ -25,7 +25,8 @@ import { RectifDataComponent } from './rectif-data/rectif-data.component';
 import { ClientComponent } from './client/client.component';
 import { RectifListComponent } from './rectif-list/rectif-list.component';
 
-import { UserInfo } from './model/userInfo';
+
+
 //create our cost var with the information about the format that we want 
 export const MY_FORMATS = {
   parse: {
@@ -78,26 +79,4 @@ export const MY_FORMATS = {
 
 export class AppModule { 
 
-  userInfo : UserInfo;
-
-  constructor(private route: ActivatedRoute) { 
-    console.log("hago cosines en el arranque");
-    this.userInfo ? this.userInfo : this.getUserInfo();
-    console.log(this.userInfo);
-  }
-
-  private getUserInfo() {
-    this.userInfo = new UserInfo();
-    this.userInfo.matricule = this.getUrlParameter('matricule');
-    this.userInfo.numRL = this.getUrlParameter('numRL');
-    this.userInfo.omf = this.getUrlParameter('omf');
-  }
-
-  private getUrlParameter(sParam) { 
-    return decodeURIComponent(window.location.search.substring(1)).split('&') 
-            .map((v) => { return v.split("=") }) 
-            .filter((v) => { return (v[0] === sParam) ? true : false }) 
-            .reduce((acc:any,curr:any) => { return curr[1]; }, undefined);
-  };
-    
 }

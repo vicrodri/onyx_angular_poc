@@ -7,6 +7,5 @@
         <input type="text" id="txtSerie" class="form-control" name="serie" pattern="\d*" maxlength="3" [(ngModel)]="client.serie">
         <input type="text" id="txtSCompte" class="form-control" name="sCompte" pattern="\d*" maxlength="2" [(ngModel)]="client.sCompte" (blur)="getClient()">
         <label id="lblClient">{{ client.name }}</label>
-        
     </div>
 </div>

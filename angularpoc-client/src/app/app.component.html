@@ -1,6 +1,9 @@
 <body>
 <header>
-  <h2><a class="nav-link" href="#" role="button" routerLinkActive="active" routerLink="/" >{{title}}</a></h2>
+  <div style="padding: 1rem;">
+    <h6 style="display: inline-block; width: 20%;">{{userInfo.matricule}}</h6>
+    <h2 style="display: inline-block; width: 80%; text-align: right;"><a class="nav-link" href="#" role="button" routerLinkActive="active" routerLink="/" >{{title}}</a></h2>
+  </div>  
 </header>
 <div id='main'>
 <nav class="onyx-main-menu">
@@ -25,9 +28,14 @@
           <a class="dropdown-item" role="button" href="#" routerLink="/rectifMatif_interroger" routerLinkActive="active">Interroger</a></li>
       </ul>
     </li>
-    <li>
-      <a href="" role="button" (click)="quit();"
-        aria-haspopup="true" aria-expanded="false">Quitter</a>
+    <li style="width: 100%;">
+      <a href="" role="button" (click)="quit();" aria-haspopup="true" aria-expanded="false">Quitter</a>
+    </li>
+    <li style="width: 100%;">
+      <hr style="background: #4c9bd4;"/>
+    </li>
+    <li style="width: 100%;">
+      <a href="" role="button" (click)="openCCM();" aria-haspopup="true" aria-expanded="false">CCM</a>
     </li>
   </ul>
 </nav>
