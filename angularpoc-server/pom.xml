@@ -102,11 +102,11 @@
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.socgen.onyx</groupId>
-            <artifactId>onyx-test-core</artifactId>
-            <version>0.0.0.1-SNAPSHOT</version>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>com.socgen.onyx</groupId> -->
+<!--             <artifactId>onyx-test-core</artifactId> -->
+<!--             <version>0.0.0.1-SNAPSHOT</version> -->
+<!--         </dependency> -->
 
         <dependency>
             <groupId>commons-codec</groupId>
@@ -200,7 +200,25 @@
 		      <artifactId>javax.servlet-api</artifactId>
 		      <scope>provided</scope>
 		    </dependency>
-	</dependencies>
+		    
+		 <dependency>
+      <groupId>com.socgen.libapp</groupId>
+      <artifactId>ue</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.socgen.libapp</groupId>
+      <artifactId>bc</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+    
+    <dependency>
+            <groupId>com.socgen.rec</groupId>
+            <artifactId>rec-core</artifactId>
+            <version>0.0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 	
 	<build>
 		<plugins>
