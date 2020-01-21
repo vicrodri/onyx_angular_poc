@@ -20,9 +20,9 @@ export class ClientComponent implements OnInit {
 
   getClient(): void {
     window.console.log(JSON.stringify(this.client));
-    this.clientService.getClient(this.client).subscribe(client$ =>  {
-      window.console.log('hago: ' + JSON.stringify(client$));
-      this.client = client$ ? client$[0] : this.client;
+    this.clientService.getClient(this.client).subscribe(result$ =>  {
+      window.console.log('hago: ' + JSON.stringify(result$));
+      this.client.name = result$ ? result$ : this.client.name;
       window.console.log('hice: ' + JSON.stringify(this.client));
    });
     

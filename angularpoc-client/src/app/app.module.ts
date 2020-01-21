@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,12 +18,14 @@ import {
 } from '@angular/material-moment-adapter';
 
 //BBDD MOCK
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+//import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+//import { InMemoryDataService }  from './in-memory-data.service';
 
 import { RectifDataComponent } from './rectif-data/rectif-data.component';
 import { ClientComponent } from './client/client.component';
 import { RectifListComponent } from './rectif-list/rectif-list.component';
+
+import { UserInterceptor } from './helper/user.interceptor';
 
 
 
@@ -56,7 +58,7 @@ export const MY_FORMATS = {
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false })
+    //HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false })
   ],
   providers: [
     {
@@ -72,6 +74,9 @@ export const MY_FORMATS = {
     {
     provide: MAT_DATE_FORMATS,
     useValue: MY_FORMATS
+    },
+    {
+      provide: HTTP_INTERCEPTORS, useClass: UserInterceptor, multi: true
     }
   ],
   bootstrap: [AppComponent]
