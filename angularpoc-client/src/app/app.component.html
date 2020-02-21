@@ -1,50 +1,56 @@
-<body>
-<header>
-  <div style="padding: 1rem;">
-    <h6 style="display: inline-block; width: 20%;">{{userInfo.matricule}}</h6>
-    <h2 style="display: inline-block; width: 80%; text-align: right;"><a class="nav-link" href="#" role="button" routerLinkActive="active" routerLink="/" >{{title}}</a></h2>
+<div class="onyx-bg">
+  <div class="row mb-1 header">
+    <div class="col-sm-3 mt-2 d-flex align-items-center">
+      <h6 class="ml-2">{{userInfo.matricule}}</h6>
+    </div>
+    <div class="col-sm-9 mt-2 d-flex align-items-center justify-content-end">
+      <h2><a class="nav-link" href="#" role="button" routerLinkActive="active" routerLink="/" >{{title}}</a></h2>
+    </div>
   </div>  
-</header>
-<div id='main'>
-<nav class="onyx-main-menu">
-  <ul class="onyx-drop-menu">
-    <li class="onyx-drop-menu-item">
-      <a href="#" role="button" aria-haspopup="true"
-       aria-expanded="false" routerLinkActive="active">Rectification Fiscale Coupons</a>
-      <ul class="onyx-drop-submenu">
-        <li>
-          <a class="dropdown-item" role="button" href="#" routerLink="/rectifCoupons_creer" routerLinkActive="active">Creer</a></li>
-        <li>
-          <a class="dropdown-item" role="button" href="#" routerLink="/rectifCoupons_interroger" routerLinkActive="active">Interroger</a></li>
-      </ul>
-    </li>
-    <li class="onyx-drop-menu-item">
-      <a href="#" role="button" aria-haspopup="true"
-       aria-expanded="false" routerLinkActive="active">Rectification Fiscale Matif et TCN</a>
-      <ul class="onyx-drop-submenu">
-        <li>
-          <a class="dropdown-item" role="button" href="#" routerLink="/rectifMatif_creer" routerLinkActive="active">Creer</a></li>
-        <li>
-          <a class="dropdown-item" role="button" href="#" routerLink="/rectifMatif_interroger" routerLinkActive="active">Interroger</a></li>
-      </ul>
-    </li>
-    <li style="width: 100%;">
-      <a href="" role="button" (click)="quit();" aria-haspopup="true" aria-expanded="false">Quitter</a>
-    </li>
-    <li style="width: 100%;">
-      <hr style="background: #4c9bd4;"/>
-    </li>
-    <li style="width: 100%;">
-      <a href="" role="button" (click)="openCCM();" aria-haspopup="true" aria-expanded="false">CCM</a>
-    </li>
-  </ul>
-</nav>
-<article >
-    <router-outlet></router-outlet>
-</article>
+  <div id="main" class="row mb-1">
+    <div class="col-sm-2 p-0">
+      <div class="onyx-main-menu">
+        <ul class="onyx-drop-menu">
+          <li class="onyx-drop-menu-item">
+            <a href="#" role="button" aria-haspopup="true"
+            aria-expanded="false" routerLinkActive="active">Rectification Fiscale Coupons</a>
+            <ul class="onyx-drop-submenu">
+              <li>
+                <a class="dropdown-item" role="button" href="#" routerLink="/rectifCoupons_creer" routerLinkActive="active">Creer</a></li>
+              <li>
+                <a class="dropdown-item" role="button" href="#" routerLink="/rectifCoupons_interroger" routerLinkActive="active">Interroger</a></li>
+            </ul>
+          </li>
+          <li class="onyx-drop-menu-item">
+            <a href="#" role="button" aria-haspopup="true"
+            aria-expanded="false" routerLinkActive="active">Rectification Fiscale Matif et TCN</a>
+            <ul class="onyx-drop-submenu">
+              <li>
+                <a class="dropdown-item" role="button" href="#" routerLink="/rectifMatif_creer" routerLinkActive="active">Creer</a></li>
+              <li>
+                <a class="dropdown-item" role="button" href="#" routerLink="/rectifMatif_interroger" routerLinkActive="active">Interroger</a></li>
+            </ul>
+          </li>
+          <li style="width: 100%;">
+            <a href="" role="button" (click)="quit();" aria-haspopup="true" aria-expanded="false">Quitter</a>
+          </li>
+          <li style="width: 100%;">
+            <hr style="background: #4c9bd4;"/>
+          </li>
+          <li style="width: 100%;">
+            <a href="" role="button" (click)="openCCM();" aria-haspopup="true" aria-expanded="false">CCM</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-10 pl-1 pr-0">
+      <div class="onyx-content p-1">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
 </div>
 
-<footer class="footer">
-  <h5>REC Angular POC</h5>
-</footer>
-</body>
+<div class="row col-sm-12 d-flex justify-content-end footer">
+  <h5 class="mt-1">REC Angular POC</h5>
+</div>

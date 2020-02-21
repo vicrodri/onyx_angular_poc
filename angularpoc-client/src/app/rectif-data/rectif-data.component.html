@@ -6,7 +6,6 @@
     </div>
     <div>
         <label for="txtDCredit" id="lblDCredit">Date du crédit:</label>
-        <!--<input type="text" id="txtDCredit" class="form-control" name="dCredit" pattern="\d*" maxlength="10">-->
         <mat-form-field style="padding-left: 0.5em; font-size: 0.9rem; margin-top: -1rem; vertical-align: sub;">
             <input matInput [matDatepicker]="picker" >
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -19,7 +18,6 @@
     </div>
     <div>
         <label for="cmbForme" id="lblForme">Forme:</label>
-        <!--<input type="text" id="cmbForme" class="form-control" name="forme" >-->
         <select id="cmbForme" class="form-control" name="forme">
             <option value="1">option 1</option>
             <option value="2">option 2</option>

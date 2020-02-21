@@ -1,105 +1,38 @@
-body {
-    background: rgb(173, 199, 255);
-}
- 
 #main {
+    margin-left: 0;
+    margin-right: 0;
     min-height: 600px;
-    margin: 0px;
-    padding: 0px;
-    display: -webkit-flex;
-    display:         flex;
-    -webkit-flex-flow: row;
-            flex-flow: row;
 }
   
-#main > article {
-    margin: 4px;
-    padding: 5px;
+#main .onyx-content {
     border: 5px solid #4c9bd4;
     border-radius: 7pt;
-    background: white;
-    -webkit-flex: 3 1 60%;
-            flex: 3 1 60%;
-    -webkit-order: 2;
-            order: 2;
-    
+    background: white;   
+    padding-right: 0; 
+    min-height: 100%;
 }
    
-#main > nav {
-    margin: 4px;
-    padding: 5px;
+#main .onyx-main-menu {
     border: 5px solid #4c9bd4;
     border-radius: 7pt;
-    background: white;
-    -webkit-flex: 1 6 20%;
-            flex: 1 6 20%;
-    -webkit-order: 1;
-            order: 1;
-    
-}
-   
-#main > aside {
-    margin: 4px;
-    padding: 5px;
-    border: 5px solid #4c9bd4;
-    border-radius: 7pt;
-    background: white;
-    -webkit-flex: 1 6 20%;
-            flex: 1 6 20%;
-    -webkit-order: 3;
-            order: 3;
-    
+    background: white;    
+    min-height: 100px; 
+    min-height: 100%;
 }
   
-header, footer {
-    display: block;
-    margin: 4px;
-    padding: 5px;
-    min-height: 100px;
+.header, .footer {
     border: 5px solid #4c9bd4;
     border-radius: 7pt;
     background: black;
     color: white;
-}
-
-header > h2 {
-    text-align: right; 
-    padding: 1rem 2rem; 
-    display: block; 
-    width: 100%; 
-}
-
-footer > h5 {
-    text-align: right; 
-    padding: 1rem 2rem; 
-    display: block; 
-    width: 100%; 
+    margin-left: 0;
+    margin-right: 0;
 }
 
 h2 > a {
     color: white;
 }
   
-/* Too narrow to support three columns */
-@media all and (max-width: 640px) {
-
-    #main, #page {
-        -webkit-flex-flow: column;
-                flex-flow: column;
-    }
-    
-    #main > article, #main > nav, #main > aside {
-        /* Return them to document order */
-        -webkit-order: 0;
-                order: 0;
-    }
-
-    #main > nav, #main > aside, header, footer {
-        min-height: 50px;
-        max-height: 50px;
-    }
-}
-
 /* CSSTerm.com Horizontal Easy DropDown CSS menu */
 
 .onyx-drop-menu {
